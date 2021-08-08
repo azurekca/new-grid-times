@@ -62,7 +62,7 @@ const MarketsSection = styled.section`
 const MarketCards = styled.div`
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
 `;
 
 const SportsSection = styled.section`
@@ -72,7 +72,7 @@ const SportsSection = styled.section`
 const SportsStories = styled.div`
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   @media ${QUERIES.tabletAndUp} {
     display: flex;
     gap: 16px;

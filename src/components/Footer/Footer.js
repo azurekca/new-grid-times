@@ -176,7 +176,7 @@ const MainNavArea = styled.div`
   text-align: center;
   @media ${QUERIES.tabletAndUp} {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     text-align: left;
   }
 `;
