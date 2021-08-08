@@ -116,6 +116,10 @@ const OpinionSection = styled.section`
 
 const AdvertisementSection = styled.section`
   grid-area: advertisement;
+  @media ${QUERIES.tabletOnly} {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
   @media ${QUERIES.laptopAndUp} {
     ${divider("top")}
   }
