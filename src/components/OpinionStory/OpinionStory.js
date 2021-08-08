@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components/macro';
-import { QUERIES } from '../../constants';
+import React from "react";
+import styled from "styled-components/macro";
+import { QUERIES } from "../../constants";
 
 const OpinionStory = ({ id, title, author, avatar }) => {
   return (
@@ -21,7 +21,6 @@ const Wrapper = styled.article`
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  align-items: center;
   @media ${QUERIES.tabletOnly} {
     display: initial;
   }
