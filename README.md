@@ -2,7 +2,7 @@
 
 In this workshop, our goal is to build a sophisticated, responsive grid layout for an online newspaper, the New Grid Times:
 
-![Desktop-sized mockup](/docs/desktop-mockup.png)
+![Desktop-sized mockup](./docs/desktop-mockup.png)
 
 ## Code structure
 

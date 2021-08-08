@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components/macro';
-import { Menu, Search, User } from 'react-feather';
+import React from "react";
+import styled from "styled-components/macro";
+import { Menu, Search, User } from "react-feather";
 
-import { QUERIES } from '../../constants';
+import { QUERIES } from "../../constants";
 
-import MaxWidthWrapper from '../MaxWidthWrapper';
-import Logo from '../Logo';
-import Button from '../Button';
+import MaxWidthWrapper from "../MaxWidthWrapper";
+import Logo from "../Logo";
+import Button from "../Button";
 
 const Header = () => {
   return (
@@ -31,19 +31,17 @@ const Header = () => {
       <MainHeader>
         <LaptopActionGroup>
           <button>
-              <Search size={24} />
-            </button>
-            <button>
-              <Menu size={24} />
-            </button>
+            <Search size={24} />
+          </button>
+          <button>
+            <Menu size={24} />
+          </button>
         </LaptopActionGroup>
         <Logo />
-        <LaptopActionGroup>
-          <SubscribeActions>
-            <Button>Subscribe</Button>
-            <SubscribeLink>Already a member?</SubscribeLink>
-          </SubscribeActions>
-        </LaptopActionGroup>
+        <SubscribeActions>
+          <Button>Subscribe</Button>
+          <SubscribeLink>Already a member?</SubscribeLink>
+        </SubscribeActions>
       </MainHeader>
     </header>
   );
@@ -84,18 +82,24 @@ const LaptopActionGroup = styled(ActionGroup)`
 `;
 
 const SubscribeActions = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  text-align: center;
+  display: none;
+  @media ${QUERIES.laptopAndUp} {
+    justify-self: end;
+    display: revert;
+    position: relative;
+  }
 `;
 
 const SubscribeLink = styled.a`
-  color: inherit;
+  color: var(--color-gray-900);
   font-family: var(--font-family-serif);
   font-size: 14px;
   font-style: italic;
+  margin-top: 8px;
+  position: absolute;
+  text-align: center;
   text-decoration: underline;
+  width: 100%;
 `;
 
 const MainHeader = styled(MaxWidthWrapper)`
@@ -104,9 +108,9 @@ const MainHeader = styled(MaxWidthWrapper)`
   justify-content: center;
   margin-top: 32px;
   margin-bottom: 48px;
-   @media ${QUERIES.laptopAndUp} {
-    align-items: baseline;
-  justify-content: space-between;
+  @media ${QUERIES.laptopAndUp} {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
   }
 `;
 

@@ -97,8 +97,8 @@ const OpinionStoryList = styled(StoryList)`
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
     > *:not(:last-of-type) {
-      --divider-border: none;
-      --divider-space: 0;
+      --divider-border: revert;
+      --divider-space: revert;
     }
   }
 `;
