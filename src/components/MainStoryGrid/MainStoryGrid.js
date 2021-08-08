@@ -31,7 +31,7 @@ const MainStoryGrid = () => {
       <OpinionSection>
         <SectionTitle>Opinion</SectionTitle>
         <StoryList>
-          {OPINION_STORIES.map((story, index) => (
+          {OPINION_STORIES.map((story) => (
             <OpinionStory key={story.id} {...story} />
           ))}
         </StoryList>
@@ -66,6 +66,12 @@ const SecondaryStorySection = styled.section`
 const StoryList = styled.div`
   display: flex;
   flex-direction: column;
+  
+  > *:not(:last-of-type) {
+    border-bottom: 1px solid var(--color-gray-300);
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
 `;
 
 const OpinionSection = styled.section`
